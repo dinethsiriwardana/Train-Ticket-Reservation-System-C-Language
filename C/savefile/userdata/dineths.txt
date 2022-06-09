@@ -1,0 +1,3 @@
+2022-06-04,550,Mathara,Colombo,5,0,0
+2022-06-05,150,Mathara,Colombo,5,0,0
+2022-06-04,850,Mathara,Colombo,5,0,0
