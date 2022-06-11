@@ -2,15 +2,70 @@
 #include <string.h>
 #include <stdlib.h>
 
-void bookedlist(char *username);
-void deletebooking(int bookno, char *username);
+void bookedlist(char username[]);
+void deletebooking(int bookno, char username[]);
 
-void deletebooking(int bookno, char *username)
+int main()
 {
 
-    FILE *file = fopen("savefile/userdata/dineths.txt", "r");
+    char username[100] = "dineths";
+    int bookno;
+    bookedlist(username);
+    printf("\nPress the number for delete booking : ");
+    scanf("%d", &bookno);
+    deletebooking(bookno, username);
+    return 0;
+}
 
-    FILE *filebkp = fopen("savefile/userdata/dinethsbkp.txt", "w");
+
+void bookedlist(char username[])
+{
+    
+    char fileurlfirst[100] = "savefile/userdata/";
+
+    char filename[500] = "";
+    strcat(filename , fileurlfirst);
+    strcat(filename , username);
+    strcat(filename , ".txt");
+
+    FILE *file = fopen(filename, "r");
+
+    if (!file)
+    {
+        printf("\n Unable to open : ");
+        return;
+    }
+    char line[500];
+    char data[10];
+    int lineno = 1;
+    printf("************* User Recording of  Username - %s *************** \n\n", username);
+    while (fgets(line, sizeof(line), file))
+    {
+        printf("%d. %s", lineno, line);
+        lineno++;
+    }
+    fclose(file);
+
+    printf("\n");
+}
+
+
+
+void deletebooking(int bookno, char username[])
+{
+
+    char fileurlfirst[100] = "savefile/userdata/";
+    char filename[500] = "";
+    char filenamebkp[500] = "";
+    strcat(filename , fileurlfirst);
+    strcat(filename , username);
+    strcat(filename , ".txt");
+
+    strcat(filenamebkp , fileurlfirst);
+    strcat(filenamebkp , username);
+    strcat(filenamebkp , "bkp.txt");
+    FILE *file = fopen(filename, "r");
+    FILE *filebkp = fopen(filenamebkp, "w");
 
     if (!file)
     {
@@ -25,13 +80,12 @@ void deletebooking(int bookno, char *username)
 
         if (lineno != bookno)
         {
-            // printf("%d. %s",lineno ,line);
             fprintf(filebkp, "%s", line);
         }
         else
         {
-            printf("Remove this line: %d. %s", lineno, line);
-            printf("Are you Sure: [Y/N]:");
+            printf("\nSystem will remove this booking:  No: %d - %s", lineno, line);
+            printf("Are you Sure: [Y/N]: ");
             scanf(" %c", &deletecon);
             if (deletecon == 'N' || deletecon == 'n')
             {
@@ -41,54 +95,16 @@ void deletebooking(int bookno, char *username)
         lineno++;
     }
     fclose(file);
-    if (deletecon == 'N' || deletecon == 'n')
+    if (deletecon != 'N' || deletecon != 'n')
     {
-        if (remove("savefile/userdata/asd.txt") == 0)
+        printf("Deleting...");
+        if (remove(filename) == 0)
         {
-        rename("savefile/userdata/aa.txt", "savefile/userdata/asd.txt");
+        if (rename(filenamebkp, filename) == 0) {
+            printf("\nDeleting Complete");
+        }
         }
     }
 
     printf("\n");
-}
-
-void bookedlist(char *username)
-{
-    
-    // char fileurlfirst = "savefile/userdata/";
-    // char fileurlend = ".txt";
-    char filename;
-    strcat(filename , "savefile/userdata/");
-
-    FILE *file = fopen("savefile/userdata/dineths.txt", "r");
-
-    if (!file)
-    {
-        printf("\n Unable to open : ");
-        return;
-    }
-    char line[500];
-    char data[10];
-    int lineno = 1;
-
-    while (fgets(line, sizeof(line), file))
-    {
-        printf("%d. %s", lineno, line);
-        lineno++;
-    }
-    fclose(file);
-
-    printf("\n");
-}
-int main()
-{
-    char filename = "s";
-    strcat(filename , "savefile/userdata/");
-    char *username = "dineths";
-    int bookno;
-    bookedlist(username);
-    printf("\nPress the number for delete booking ");
-    scanf("%d", &bookno);
-    deletebooking(bookno, username);
-    return 0;
 }
