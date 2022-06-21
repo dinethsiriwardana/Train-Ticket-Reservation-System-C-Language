@@ -1,0 +1,5 @@
+NT01	A		putthalama	04.30	Colombo_Fort	08.20	Normal
+NT02	A		Colombo_Fort	17.30	putthalama	20.20	Normal
+NT03	B		chilaw		05.30	Colombo_Fort	07.20	Normal
+NT04	Muthu_Kumari	Colombo_Fort	10.30	puttalama	12.20	Normal
+NT05	Night_Mail	Colombo_Fort	22.30	Noor_Nagara	00.20	Normal

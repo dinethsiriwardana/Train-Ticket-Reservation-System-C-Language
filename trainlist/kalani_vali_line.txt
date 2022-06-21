@@ -1,0 +1,5 @@
+NT01	(A)	Avissawella	16.30	Colombo_Fort	18.20	Normal
+NT02	(B)	Colombo_Fort	08.30	Avissawella	10.20	Normal
+NT03	(B)	Avissawella	03.30	Colombo_Fort	05.20	Normal
+NT04	Night_Mail Colombo_Fort	10.30	Avissawella	12.20	Normal
+NT05	Night_Mail Colombo_Fort	22.30	Avissawella	00.20	Normal

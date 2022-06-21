@@ -1,0 +1,15 @@
+ET01	Udarata_Menike	Badulla		05.15	colombo_Fort	19.45	Express
+NT01	Ruhunu_Kumari	Colombo_Fort	08.00	Mathara		10.00	Normal
+NT02	Yal_Devi	Kankasanthure	03.15	Colombo_Fort	06.00	Normal
+ET02	Podi_Menike	Colombo_Fort	05.55	Badulla		16.00	Express	
+ET03	A..	   	colombo_Fort	05.15	Mathale		09.45	Express
+ET04	Night_Mail	colombo_Fort	20.00	Badulla		07.10	Express
+NT03	Samudra_Devi	Maradana	16.40	Galle		20.05	Normal
+ET05	Samudra_Devi	Galla		05.00	Maradana	08.06	Express
+ET06	Sagarika	maradana	16.40	Mathara		19.13	Express
+ET07	Udarata_Menike	Colombo_Fort	09.45	Badulla		19.45	Express
+ET08	Ruhunu_Kumari	Mathara		05.20	Colombo_Fort	09.05	Express
+ET09	Night_Mail	Badulla		18.00	Colombo_Fort	05.15	Express
+ET10	B..		Kandy		15.30	colombo_Fort	18.55	Express
+ET11	Yal_Devi	Colombo_Fort	16.00	Kankasanthure	19.00	Express
+NT04	(C)..   	Kandy		05.00	Colombo_Fort	08.17	Normal

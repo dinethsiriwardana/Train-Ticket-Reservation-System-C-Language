@@ -1,0 +1,5 @@
+NT01	Rajarata_Rajini	Mathara		09.30	Colombo_Fort	13.20	Normal
+NT02	Rajarata_Rajini	Colombo_Fort	13.30	Vavuniya	20.20	Normal
+NT04	Rajarata_Rajini	Vavuniya	03.30	Colombo_Fort	09.20	Normal
+NT05	Night_Mail	Colombo_Fort	10.30	Matara		14.20	Normal
+NT06	Night_Mail	Colombo_Fort	22.30	vauniya		4.20	Normal
